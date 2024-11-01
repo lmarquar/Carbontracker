@@ -9,25 +9,25 @@ function LogoTitle() {
 export default function Index() {
   return (
     <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={styles.container}
     >
 		<Stack.Screen
 			options={{
-			title: 'My home',
-			headerStyle: { backgroundColor: '#f4511e' },
-			headerTintColor: '#fff',
-			headerTitleStyle: {
-				fontWeight: 'bold',
-			},
+				title: 'My home',
+				headerStyle: { backgroundColor: '#f4511e' },
+				headerTintColor: '#fff',
+				headerTitleStyle: {
+					fontWeight: 'bold',
+				},
 
-//          headerTitle: props => <LogoTitle {...props} />,
-        }}
-      />
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+//				headerTitle: () => LogoTitle(),
+				headerTitle: () => (
+					<Image style={{ width: 50, height: 50 }} source={require('../assets/images/tacho.png')} />
+				),
+			}}
+	  	/>
+		<Text>Edit app/index.tsx to edit this screen.</Text>
+		<Link href="/social">View socials</Link>
     </View>
   );
 }
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
 	  width: 50,
 	  height: 50,
 	},
-  });
+});
