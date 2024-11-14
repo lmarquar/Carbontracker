@@ -12,8 +12,7 @@ export default function RootLayout() {
 			fontWeight: 'bold',
 			},
 		}}>
-      <Stack.Screen name="index" />
-      <Stack.Screen name="social" />
-	  </Stack>
+		<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+	</Stack>
   );
 }

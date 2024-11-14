@@ -3,7 +3,7 @@ import { Image, Text, View, StyleSheet } from "react-native";
 
 function LogoTitle() {
 	return (
-		<Image style={styles.image} source={require('../assets/images/tacho.png')} />
+		<Image style={styles.image} source={require('@/assets/images/tacho.png')} />
 	);
 }
 export default function Index() {
@@ -20,9 +20,8 @@ export default function Index() {
 					fontWeight: 'bold',
 				},
 
-//				headerTitle: () => LogoTitle(),
 				headerTitle: () => (
-					<Image style={{ width: 50, height: 50 }} source={require('../assets/images/tacho.png')} />
+					<Image style={{ width: 50, height: 50 }} source={require('@/assets/images/tacho.png')} />
 				),
 			}}
 	  	/>
