@@ -1,13 +1,38 @@
 import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { Button } from "react-native";
+
+import * as SQLite from 'expo-sqlite';
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#ffd33d',
+        headerStyle: {
+          backgroundColor: '#25292e',
+        },
+        headerShadowVisible: false,
+        headerTintColor: '#fff',
+        headerRight: () => (
+          <Button
+          title="Info"
+          onPress={() => alert('This is a button!')}
+          />
+        ),
+        tabBarStyle: {
+        backgroundColor: '#25292e',
+        },
       }}
     >
+      <Tabs.Screen
+        name="social"
+        options={{
+          title: 'social',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused?'people-circle-outline' :'people-circle-sharp'} color={color} size={24} />
+          ),
+          }} />
       <Tabs.Screen
         name="index"
         options={{
@@ -17,11 +42,11 @@ export default function TabLayout() {
           ),
           }} />
       <Tabs.Screen
-        name="social"
+        name="projects"
         options={{
-          title: 'social',
+          title: 'How to compensate',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused?'people-circle-outline' :'share-social-sharp'} color={color} size={24} />
+            <Ionicons name={focused ? 'leaf-sharp' : 'leaf-outline'} color={color} size={24} />
           ),
           }} />
     </Tabs>

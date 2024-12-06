@@ -25,7 +25,7 @@ export default function Index() {
 				),
 			}}
 	  	/>
-		<Text>Edit app/index.tsx to edit this screen.</Text>
+		<Text>Hallo Tipot</Text>
 		<Link href="/social">View socials</Link>
     </View>
   );
