@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Button } from "react-native";
+import { Link, Stack } from 'expo-router';
 
 import * as SQLite from 'expo-sqlite';
 
@@ -8,18 +9,8 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        headerShown: false,
         tabBarActiveTintColor: '#ffd33d',
-        headerStyle: {
-          backgroundColor: '#25292e',
-        },
-        headerShadowVisible: false,
-        headerTintColor: '#fff',
-        headerRight: () => (
-          <Button
-          title="Info"
-          onPress={() => alert('This is a button!')}
-          />
-        ),
         tabBarStyle: {
         backgroundColor: '#25292e',
         },
