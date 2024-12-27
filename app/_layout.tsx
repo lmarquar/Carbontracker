@@ -1,6 +1,7 @@
 import { Link, Stack } from "expo-router";
 import {Image, Text, View, StyleSheet, Button } from "react-native";
 
+
 function LogoTitle() {
 	return (
 		<Image style={styles.image} source={require('@/assets/images/tacho.png')} />
@@ -21,12 +22,11 @@ export default function RootLayout() {
 				<Image style={{ width: 50, height: 50 }} source={require('@/assets/images/tacho.png')} />
 			),
 			headerRight: () => (
-				<Link href="/(settings)/ImageViewer" className="btn btn-primary">Sign up</Link>
-	  //          <Link href={require('@/components/projects')} className="btn btn-primary">Sign up</Link>
-	  //          <Link href={require('@/app/(tabs)/social')} className="btn btn-primary">Sign up</Link>
+				<Link href="/(settings)" className="btn btn-primary">Settings</Link> //probalby not ideal, but good enough
 			  ),
 		}}>
 		<Stack.Screen name="(tabs)" options={{ headerShown: true}} />
+		<Stack.Screen name="(settings)" options={{ headerShown: false}} />
 	</Stack>
   );
 }
