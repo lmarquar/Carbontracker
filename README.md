@@ -1,3 +1,13 @@
+Hello there,
+this idea of a carbon tracker which automatically tracks your footprint in the background stuck to me:
+
+It should do so with collecting GPS-data as well as tracking expenses.
+Also a way simple way to compare with other users and social media integration would be my wish.
+Check out the wiki for a visual representation.
+
+Sadly i don't have too much knowledge and no coworkers, so i'm stuck to prototyping.
+If you are interested in coding it, i will be happy to hear from you.
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
